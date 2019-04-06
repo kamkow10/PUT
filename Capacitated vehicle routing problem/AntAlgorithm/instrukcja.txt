@@ -1,0 +1,10 @@
+./a.out PAR1 PAR2 PAR3 PAR4 PAR5 PAR6
+
+PAR1 - nazwa pliku wejściowego
+PAR2 - czas działania (w sekundach)
+PAR3 - wartość parametru ALFA
+PAR4 - wartość parametru BETA
+PAR5 - wartość parametru PAROWANIE
+PAR6 - wartość parametru Q
+
+domyślne wartości kolejno: input.txt 60 2 2 0.2 1000000
