@@ -1,2 +1,2 @@
-# WI
+# PUT
 For my study projects
