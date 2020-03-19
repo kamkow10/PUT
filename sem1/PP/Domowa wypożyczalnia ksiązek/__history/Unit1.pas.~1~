@@ -1,0 +1,59 @@
+unit Unit1;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.DateUtils, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, ;
+
+type
+  TForm1 = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+type
+  wskaznik = ^element;
+  element = record
+    autor     : string;
+    tytul     : string;
+    wypo      : string;
+    data_wypo : TDateTime;
+    next      : wskaznik;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+{Procedura dodawania elementu do lisy}
+procedure dodaj (var head : wskaznik; x : string; y : string;
+                  z : string; t : TDateTime;);
+var
+  p,e : wskaznik;
+begin
+  new(e);
+  e^.next := nil;
+  e^.autor := x;
+  e^.tytul := y;
+  e^.wypo := z;
+  e^.data_wypo := t;
+  p := head;
+  if p = nil then
+    head := e
+  else
+  begin
+    while p^.next <> nil do
+      p := p^.next;
+    p^.next := e;
+  end;
+end;
+
+end.
+
+

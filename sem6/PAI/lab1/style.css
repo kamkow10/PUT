@@ -1,0 +1,33 @@
+header {
+    background-color: burlywood;
+    padding: 20px;
+}
+
+nav {
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.navigator-element {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+footer {
+    background-color: brown;
+    color: white;
+    padding: 30px;
+}
+
+#footer-text {
+    margin-bottom: 35px;
+}
+
+main {
+    padding: 40px;
+    background-color: beige;
+}
+
+#footer-links a {
+    color:white;
+}

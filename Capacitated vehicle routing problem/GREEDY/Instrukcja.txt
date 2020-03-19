@@ -1,6 +1,0 @@
-./a.out
-	program wczytuje zawartosc pliku input.txt
-./a.out ARG1
-	program wczytuje zawartosc pliku podanego jako argument ARG1
-
-Wynik jest zapisywany do pliku output.txt

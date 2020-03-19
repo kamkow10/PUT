@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="D:\PROGRAMY\lazarus\fpc\3.0.2\bin\x86_64-win64\fpc.exe" Date="1247518955"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -WG -l -vewnhibq &quot;-FiC:\Users\Kowal\Desktop\Obiektowy Armstrong\lib\x86_64-win64&quot; -FuD:\PROGRAMY\lazarus\lcl\units\x86_64-win64\win32 -FuD:\PROGRAMY\lazarus\lcl\units\x86_64-win64 -FuD:\PROGRAMY\lazarus\components\lazutils\lib\x86_64-win64 -FuD:\PROGRAMY\lazarus\packager\units\x86_64-win64 &quot;-FuC:\Users\Kowal\Desktop\Obiektowy Armstrong\&quot; &quot;-FUC:\Users\Kowal\Desktop\Obiektowy Armstrong\lib\x86_64-win64\&quot; -dLCL -dLCLwin32 armstrong.lpr"/>
+</CONFIG>
