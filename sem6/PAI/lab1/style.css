@@ -1,33 +1,41 @@
-header {
-    background-color: burlywood;
-    padding: 20px;
+li {
+    list-style-type: square
 }
 
-nav {
-    background-color: lightblue;
-    padding: 20px;
+#cena {
+    color: red;
+    font-weight: bold;
 }
 
-.navigator-element {
-    padding: 5px;
-    border: 1px solid black;
+.wstęp {
+    font-style: italic;
 }
 
-footer {
-    background-color: brown;
-    color: white;
-    padding: 30px;
+td img {
+    border: 4px solid blue;
 }
 
-#footer-text {
-    margin-bottom: 35px;
+td img:hover {
+    border-color: red;
 }
 
-main {
-    padding: 40px;
-    background-color: beige;
+h1 + h2 {
+    letter-spacing: 5px;
 }
 
-#footer-links a {
-    color:white;
+td[colspan="2"] p {
+    font-size: small;
 }
+
+p + p {
+    color: gray;
+}
+
+body {
+    background-image: url(book.png);
+    background-repeat: repeat-y
+}
+
+h1 { color: blue }
+
+h1 { color: green }
