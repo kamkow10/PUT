@@ -1,0 +1,200 @@
+====== tab[0], tab[1] ======
+Wartosc liczby PI wynosi  3.141148938154
+Czas przetwarzania wynosi 1.252230 sekund
+
+====== tab[1], tab[2] ======
+Wartosc liczby PI wynosi  3.140454880166
+Czas przetwarzania wynosi 1.376617 sekund
+
+====== tab[2], tab[3] ======
+Wartosc liczby PI wynosi  3.141622235470
+Czas przetwarzania wynosi 2.643925 sekund
+
+====== tab[3], tab[4] ======
+Wartosc liczby PI wynosi  3.141621725444
+Czas przetwarzania wynosi 2.651533 sekund
+
+====== tab[4], tab[5] ======
+Wartosc liczby PI wynosi  3.141613603987
+Czas przetwarzania wynosi 2.670881 sekund
+
+====== tab[5], tab[6] ======
+Wartosc liczby PI wynosi  3.141626771002
+Czas przetwarzania wynosi 2.622510 sekund
+
+====== tab[6], tab[7] ======
+Wartosc liczby PI wynosi  3.141613156991
+Czas przetwarzania wynosi 2.641610 sekund
+
+====== tab[7], tab[8] ======
+Wartosc liczby PI wynosi  3.141611903935
+Czas przetwarzania wynosi 2.625793 sekund
+
+====== tab[8], tab[9] ======
+Wartosc liczby PI wynosi  3.141680992707
+Czas przetwarzania wynosi 2.655708 sekund
+
+====== tab[9], tab[10] ======
+Wartosc liczby PI wynosi  3.141386026859
+Czas przetwarzania wynosi 1.495885 sekund
+
+====== tab[10], tab[11] ======
+Wartosc liczby PI wynosi  3.141605519907
+Czas przetwarzania wynosi 3.457186 sekund
+
+====== tab[11], tab[12] ======
+Wartosc liczby PI wynosi  3.141606273279
+Czas przetwarzania wynosi 3.460536 sekund
+
+====== tab[12], tab[13] ======
+Wartosc liczby PI wynosi  3.141607557691
+Czas przetwarzania wynosi 3.469033 sekund
+
+====== tab[13], tab[14] ======
+Wartosc liczby PI wynosi  3.141606605345
+Czas przetwarzania wynosi 3.441129 sekund
+
+====== tab[14], tab[15] ======
+Wartosc liczby PI wynosi  3.141606341360
+Czas przetwarzania wynosi 3.457041 sekund
+
+====== tab[15], tab[16] ======
+Wartosc liczby PI wynosi  3.141608329171
+Czas przetwarzania wynosi 3.446626 sekund
+
+====== tab[16], tab[17] ======
+Wartosc liczby PI wynosi  3.141604190559
+Czas przetwarzania wynosi 3.449606 sekund
+
+====== tab[17], tab[18] ======
+Wartosc liczby PI wynosi  3.141806455542
+Czas przetwarzania wynosi 2.742370 sekund
+
+====== tab[18], tab[19] ======
+Wartosc liczby PI wynosi  3.141631666670
+Czas przetwarzania wynosi 3.446411 sekund
+
+====== tab[19], tab[20] ======
+Wartosc liczby PI wynosi  3.141610024320
+Czas przetwarzania wynosi 3.436125 sekund
+
+====== tab[20], tab[21] ======
+Wartosc liczby PI wynosi  3.141613414553
+Czas przetwarzania wynosi 3.444920 sekund
+
+====== tab[21], tab[22] ======
+Wartosc liczby PI wynosi  3.141613509650
+Czas przetwarzania wynosi 3.437196 sekund
+
+====== tab[22], tab[23] ======
+Wartosc liczby PI wynosi  3.141606175828
+Czas przetwarzania wynosi 3.424585 sekund
+
+====== tab[23], tab[24] ======
+Wartosc liczby PI wynosi  3.141607304798
+Czas przetwarzania wynosi 3.392690 sekund
+
+====== tab[24], tab[25] ======
+Wartosc liczby PI wynosi  3.141611462837
+Czas przetwarzania wynosi 3.425580 sekund
+
+====== tab[25], tab[26] ======
+Wartosc liczby PI wynosi  3.141337753511
+Czas przetwarzania wynosi 1.136012 sekund
+
+====== tab[26], tab[27] ======
+Wartosc liczby PI wynosi  3.141606120368
+Czas przetwarzania wynosi 3.345731 sekund
+
+====== tab[27], tab[28] ======
+Wartosc liczby PI wynosi  3.141643360455
+Czas przetwarzania wynosi 3.393172 sekund
+
+====== tab[28], tab[29] ======
+Wartosc liczby PI wynosi  3.141606668480
+Czas przetwarzania wynosi 3.363668 sekund
+
+====== tab[29], tab[30] ======
+Wartosc liczby PI wynosi  3.141607399086
+Czas przetwarzania wynosi 3.348935 sekund
+
+====== tab[30], tab[31] ======
+Wartosc liczby PI wynosi  3.141610405015
+Czas przetwarzania wynosi 3.344411 sekund
+
+====== tab[31], tab[32] ======
+Wartosc liczby PI wynosi  3.141612441602
+Czas przetwarzania wynosi 3.373651 sekund
+
+====== tab[32], tab[33] ======
+Wartosc liczby PI wynosi  3.141624036457
+Czas przetwarzania wynosi 3.366254 sekund
+
+====== tab[33], tab[34] ======
+Wartosc liczby PI wynosi  3.141712106644
+Czas przetwarzania wynosi 2.618059 sekund
+
+====== tab[34], tab[35] ======
+Wartosc liczby PI wynosi  3.141604561822
+Czas przetwarzania wynosi 3.372838 sekund
+
+====== tab[35], tab[36] ======
+Wartosc liczby PI wynosi  3.141609512441
+Czas przetwarzania wynosi 3.387429 sekund
+
+====== tab[36], tab[37] ======
+Wartosc liczby PI wynosi  3.141638942064
+Czas przetwarzania wynosi 3.434884 sekund
+
+====== tab[37], tab[38] ======
+Wartosc liczby PI wynosi  3.141607893405
+Czas przetwarzania wynosi 3.370923 sekund
+
+====== tab[38], tab[39] ======
+Wartosc liczby PI wynosi  3.141605938976
+Czas przetwarzania wynosi 3.385495 sekund
+
+====== tab[39], tab[40] ======
+Wartosc liczby PI wynosi  3.141610604797
+Czas przetwarzania wynosi 3.394265 sekund
+
+====== tab[40], tab[41] ======
+Wartosc liczby PI wynosi  3.141607998001
+Czas przetwarzania wynosi 3.355356 sekund
+
+====== tab[41], tab[42] ======
+Wartosc liczby PI wynosi  3.140977166408
+Czas przetwarzania wynosi 1.130605 sekund
+
+====== tab[42], tab[43] ======
+Wartosc liczby PI wynosi  3.141607007706
+Czas przetwarzania wynosi 3.489517 sekund
+
+====== tab[43], tab[44] ======
+Wartosc liczby PI wynosi  3.141607597934
+Czas przetwarzania wynosi 3.481694 sekund
+
+====== tab[44], tab[45] ======
+Wartosc liczby PI wynosi  3.141605525364
+Czas przetwarzania wynosi 3.467512 sekund
+
+====== tab[45], tab[46] ======
+Wartosc liczby PI wynosi  3.141617154443
+Czas przetwarzania wynosi 3.483431 sekund
+
+====== tab[46], tab[47] ======
+Wartosc liczby PI wynosi  3.141618030414
+Czas przetwarzania wynosi 3.468985 sekund
+
+====== tab[47], tab[48] ======
+Wartosc liczby PI wynosi  3.141604832695
+Czas przetwarzania wynosi 3.464531 sekund
+
+====== tab[48], tab[49] ======
+Wartosc liczby PI wynosi  3.141610909771
+Czas przetwarzania wynosi 3.473183 sekund
+
+====== tab[49], tab[50] ======
+Wartosc liczby PI wynosi  3.141793292312
+Czas przetwarzania wynosi 2.794374 sekund
+
