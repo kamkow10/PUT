@@ -1,0 +1,23 @@
+Jak uruchomić program
+
+Program uruchamiamy za pomocą skrytpu run.sh
+Skrypt przyjmuje 3 parametry, kolejno:
+* liczba procesów (w tym proces zleceniodawcy)
+* liczba miejsc w sekcji gildii magów
+* liczba miejsc w sekcji szkieletów
+
+Przykład ===
+
+./run.sh 10 1 3
+
+program zostanie uruchomiony dla 10 procesów (9 procesów specjalistów + 1 zleceniodawca), 
+w gildii bedzie miejsce tylko dla jednego specjalisty, a do wskrzeszania smoków będą dostępne trzy szkielety
+
+W pliku hostfile podajemy na jakich maszynach chcemy uruchomić program.
+
+============
+
+
+Skrypt wpierw kompiluje program. Następnie go uruchamia. Po zakończeniu programu przez wpisanie przez użytkownika "quit" lub "exit" output z programu jest zapisywany do pliku. Następnie jest on sortowany po zegarach Lamporta. Na koniec wynik sortowania jest prezentowany na terminalu i jest gotowy do analizy.
+
+Tryb debugowania w programie można właczyć za pomocą odkomentowania kaluzuli "#DEFINE DEBUGER_ON". Zalecane jest stosowanie debugowania w celu umożliwienia głębszej analizy. Bez włączonej opcji debugowania każdy proces wypisuje tylko najważniejsze informacje typu : "dostałem się do sekcji X", "zakończyłem pracę w sekcji X", "przechodzę w stan gotowości". Giną jednak w tym momencie wszelkie informacje o komunikacji między procesami, takie jak wysyłąnie/odbieranie wiadomości ACK, które są wyświetlane przy włączonym przełączniku.
