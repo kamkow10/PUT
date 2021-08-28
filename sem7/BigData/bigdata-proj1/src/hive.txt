@@ -1,0 +1,195 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS rates_ext(
+ movieId INT,
+ count INT,
+ sumRate INT)
+ ROW FORMAT DELIMITED
+ FIELDS TERMINATED BY '\t'
+ STORED AS TEXTFILE
+ location '/user/zuziatrawinska12/output3';
+
+CREATE TABLE IF NOT EXISTS rates_orc(
+ movieId INT,
+ count INT,
+ sumRate INT)
+ STORED AS ORC;
+
+INSERT OVERWRITE TABLE rates_orc
+SELECT * FROM rates_ext
+WHERE movieId IS NOT NULL;
+
+
+==============================================================
+
+CREATE EXTERNAL TABLE IF NOT EXISTS movies_ext(
+ movieId INT,
+ year INT,
+ name STRING)
+ ROW FORMAT DELIMITED
+ FIELDS TERMINATED BY ','
+ STORED AS TEXTFILE
+ location '/user/zuziatrawinska12/input4';
+
+CREATE TABLE IF NOT EXISTS movies_orc(
+ movieId INT,
+ year INT,
+ name STRING)
+ STORED AS ORC;
+
+INSERT OVERWRITE TABLE movies_orc
+SELECT * FROM movies_ext
+WHERE movieId IS NOT NULL;
+
+==============================================================
+
+SELECT m.name as tytul_filmu, m.year as rok_produkcji, (r.sumRate/r.count) as srednia_ocena, r.count as liczba_glosow
+FROM movies_orc m inner join rates_orc r on m.movieId = r.movieId
+WHERE (SELECT COUNT(*) FROM
+            (
+                SELECT m2.movieId FROM movies_orc m2 inner join rates_orc r2 on m2.movieId = r2.movieId
+                WHERE r2.count > 1000
+                AND m2.year = m.year AND (r2.sumRate/r2.count) >= (r.sumRate/r.count)
+            ) as m10
+      ) <= 3
+      AND r.count > 1000
+ORDER BY rok_produkcji DESC, srednia_ocena DESC;
+
+SELECT m.name as tytul_filmu, m.year as rok_produkcji, (r.sumRate/r.count) as srednia_ocena, r.count as liczba_glosow
+FROM movies_orc m inner join rates_orc r on m.movieId = r.movieId
+WHERE m.movieId in (
+    SELECT m2.movieId as movieId
+    FROM movies_orc m2 inner join rates_orc r2 on m2.movieId = r2.movieId
+    WHERE m2.year = m.year AND r2.count > 1000
+    LIMIT 3
+);
+
+SELECT *
+FROM (
+    SELECT m.movieId, m.name as tytul_filmu, m.year as rok_produkcji, (r.sumRate/r.count) as srednia_ocena, r.count as liczba_glosow
+    FROM movies_orc m inner join rates_orc r on m.movieId = r.movieId
+) as joinMovies
+WHERE joinMovies.movieId in (
+    SELECT m2.movieId as movieId
+    FROM movies_orc m2 inner join rates_orc r2 on m2.movieId = r2.movieId
+    WHERE m2.year = joinMovies.rok_produkcji AND r2.count > 1000
+    LIMIT 3
+);
+
+SELECT *
+FROM movies_orc m inner join rates_orc r on m.movieId = r.movieId
+ORDER BY m.movieid;
+
+SELECT m2.movieId as movieId, m2.year as year, (r2.sumRate/r2.count) as avgScore, r2.count
+FROM movies_orc m2 inner join rates_orc r2 on m2.movieId = r2.movieId
+WHERE m2.year = 1996 AND r2.count > 1000
+ORDER BY avgScore DESC
+LIMIT 3;
+
+ORDER BY rok_produkcji DESC, srednia_ocena DESC;
+
+SELECT COUNT(*) FROM
+(SELECT * FROM movies_orc m2 inner join rates_orc r2 on m2.movieId = r2.movieId
+WHERE r2.count > 1000) as m;
+
+======== to niżej to działało tylko zmieniłem natural ========
+
+select m.name as tytul_filmu, m.year as rok_produkcji, (r.sumRate/r.count) as srednia_ocena, r.count as liczba_glosow
+from movies_orc m inner join rates_orc r on m.movieId = r.movieId
+where r.count > 1000
+order by srednia_ocena
+limit 10;
+
+
+
+
+
+
+beeline -n $USER -u jdbc:hive2://localhost:10000/default
+
+
+
+--- nowy pomysł ----
+
+SELECT m.name as tytul_filmu, m.year as rok_produkcji, (r.sumRate/r.count) as srednia_ocena, r.count as liczba_glosow
+FROM movies_orc m inner join rates_orc r on m.movieId = r.movieId
+WHERE m.movieId in (
+    SELECT m2.movieId as movieId
+    FROM movies_orc m2 inner join rates_orc r2 on m2.movieId = r2.movieId
+    WHERE m2.year = m.year AND r2.count > 1000
+    LIMIT 3
+);
+
+select tytul_filmu, rok_produkcji, srednia_ocena, liczba_glosow, rank
+FROM
+(
+    SELECT m.name as tytul_filmu, m.year as rok_produkcji, (r.sumRate/r.count) as srednia_ocena, r.count as liczba_glosow,
+        rank() over (PARTITION BY m.year ORDER BY  DESC) as rank
+    FROM movies_orc m inner join rates_orc r on m.movieId = r.movieId
+) ranked_movies
+WHERE rank < 4;
+
+SELECT
+    ranked_movies.tytul_filmu as tytul_filmu,
+    ranked_movies.rok_produkcji as rok_produkcji,
+    ranked_movies.srednia_ocena as srednia_ocena
+FROM (
+    SELECT
+        movies.tytul_filmu,
+        movies.rok_produkcji,
+        movies.srednia_ocena,
+        rank() over (PARTITION BY movies.rok_produkcji ORDER BY movies.srednia_ocena DESC) as rank
+    FROM (
+        SELECT
+            m.name as tytul_filmu,
+            m.year as rok_produkcji,
+            (r.sumRate/r.count) as srednia_ocena
+        FROM movies_orc m inner join rates_orc r on m.movieId = r.movieId
+        WHERE r.count > 1000
+    ) as movies
+) as ranked_movies
+WHERE ranked_movies.rank < 4;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE EXTERNAL TABLE test(
+   tytul_filmu string,
+   rok_produkcji INT,
+   srednia_ocena DOUBLE)
+LOCATION '/user/zuziatrawinska12/test';
+
+
+INSERT OVERWRITE TABLE test
+SELECT
+    ranked_movies.tytul_filmu as tytul_filmu,
+    ranked_movies.rok_produkcji as rok_produkcji,
+    ranked_movies.srednia_ocena as srednia_ocena
+FROM (
+    SELECT
+        movies.tytul_filmu,
+        movies.rok_produkcji,
+        movies.srednia_ocena,
+        rank() over (PARTITION BY movies.rok_produkcji ORDER BY movies.srednia_ocena DESC) as rank
+    FROM (
+        SELECT
+            m.name as tytul_filmu,
+            m.year as rok_produkcji,
+            (r.sumRate/r.count) as srednia_ocena
+        FROM movies_orc m inner join rates_orc r on m.movieId = r.movieId
+        WHERE r.count > 1000
+    ) as movies
+) as ranked_movies
+WHERE ranked_movies.rank < 4;
+
+

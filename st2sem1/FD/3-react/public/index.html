@@ -1,0 +1,71 @@
+<!doctype html>
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html lang="pl">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Node/React Todo App</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- load bootstrap -->
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            padding-top: 50px;
+        }
+
+        #todo-list {
+            margin-bottom: 30px;
+        }
+
+        #todo-form {
+            margin-bottom: 50px;
+        }
+
+        .checkbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #c7cdc7;
+            border-radius: 30px;
+            padding: 10px 50px;
+        }
+
+        .checkbox button {
+            background-color: #ffc5c5;
+            font-size: 16px;
+        }
+
+        .radios {
+            display: flex;
+            justify-content: center;
+        }
+
+        .radios label {
+            padding: 20px
+        }
+    </style>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
+
+<body>
+
+<div class="container" id="todo"></div>
+
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+<script src="todo.jsx" type="text/babel"></script>
+
+</body>
+
+</html>

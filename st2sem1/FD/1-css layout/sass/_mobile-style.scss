@@ -1,0 +1,168 @@
+@use 'distances';
+@use 'colors';
+@import "fonts";
+
+@media (max-width: 900px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 0 25px;
+    box-sizing: border-box;
+
+    header {
+      height: 200px;
+      display: flex;
+      justify-content: center;
+
+      .logo {
+        width: 350px;
+        justify-content: space-between;
+
+        @media all and (max-width: 350px) { justify-content: flex-end; }
+
+        .logo-img {
+          width: 85px;
+          height: 85px;
+
+          @media all and (max-width: 350px) { display: none; }
+        }
+
+        .logo-text {
+          text-align: right;
+
+          .line {
+            left: initial;
+            right: 0;
+          }
+        }
+      }
+
+      .corner-options {
+        display: none;
+      }
+
+    }
+
+    nav {
+      display: none;
+    }
+
+    section.hello {
+      margin-top: 0;
+
+      .weather {
+        display: none;
+      }
+    }
+
+    section.experience {
+
+      .position {
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: distances.$medium;
+
+        .long-info {
+          width: 100%;
+          margin-top: distances.$medium;
+        }
+
+        .line {
+          bottom: 0;
+        }
+      }
+    }
+
+    section.nights {
+      position: relative;
+
+      .section-title {
+        margin: 100px 0 0 0;
+      }
+
+      .nights-grid {
+        display: flex;
+        flex-direction: column;
+
+        .nights-column > * {
+          margin-top: distances.$medium;
+        }
+      }
+
+      .clip-background {
+        top: distances.$large;
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 95%);
+        height: calc(100% + 100px);
+        width: 150%;
+      }
+    }
+
+    section.academy {
+      position: relative;
+
+      .academy-table .rows {
+        width: 100%;
+      }
+
+      .clip-background {
+        height: calc(100% + 180px);
+        width: 150%;
+      }
+
+
+    }
+
+    section.private-life {
+      height: auto;
+      position: relative;
+
+      .section-title {
+        margin-top: 70px;
+      }
+
+      .clip-background {
+        display: none;
+      }
+
+      .clip-background.green-overlay {
+        display: block;
+        height: calc(100% + 150px);
+        width: 150%;
+      }
+    }
+
+
+    section.contact {
+      margin: 150px 0 100px 0;
+
+      .contact-grid {
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+          margin-bottom: distances.$large;
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 280px;
+
+    .footer-wrapper {
+      width: auto;
+      height: 80%;
+      flex-direction: column;
+
+      img {
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+}
+

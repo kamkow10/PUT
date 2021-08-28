@@ -1,0 +1,32 @@
+## sudoers file.
+##
+## This file MUST be edited with the 'visudo' command as root.
+## Failure to use 'visudo' may result in syntax or file permission errors
+## that prevent sudo from running.
+
+## Host alias specification
+
+## User alias specification
+
+## Cmnd alias specification
+# Cmnd_Alias	PROCESSES = /usr/bin/nice, /bin/kill, /usr/bin/renice, \
+# 			    /usr/bin/pkill, /usr/bin/top
+
+## Runas alias specification
+
+## Defaults specification
+Defaults env_reset
+Defaults !insults
+## Uncomment to enable logging of a command's output, except for
+## sudoreplay and reboot.  Use sudoreplay to play back logged sessions.
+# Defaults log_output
+# Defaults!/usr/bin/sudoreplay !log_output
+# Defaults!/sbin/reboot !log_output
+
+## User privilege specification
+root ALL=(ALL) ALL
+
+## Read drop-in files from /etc/sudoers.d
+## (the '#' here does not indicate a comment)
+#includedir /etc/sudoers.d
+

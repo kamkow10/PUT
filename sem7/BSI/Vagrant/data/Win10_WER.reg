@@ -1,0 +1,62 @@
+Windows Registry Editor Version 5.00
+
+REM USER SETTINGS
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Windows Error Reporting]
+"Disabled"=dword:00000001
+"MaxQueueCount"=dword:00000000
+"DisableQueue"=dword:00000001
+"LoggingDisabled"=dword:00000001
+"DontSendAdditionalData"=dword:00000001
+"AutoApproveOSDumps"=dword:00000000
+"MaxQueueSize"=dword:00000000
+"ForceQueue"=dword:00000000
+"DontShowUI"=dword:00000000
+"ConfigureArchive"=dword:00000000
+"MaxArchiveCount"=dword:00000000
+"DisableArchive"=dword:00000001
+"LastQueuePesterTime"=hex(b):00,00,00,00,00,00,00,00
+"LastLiveReportFlushTime"=hex(b):00,00,00,00,00,00,00,00
+"LastResponsePesterTime"=hex(b):00,00,00,00,00,00,00,00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Windows Error Reporting\Consent]
+"DefaultConsent"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Windows Error Reporting\Hangs]
+
+
+REM MACHINESETTINGS
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
+"ErrorPort"="\\WindowsDoNotSPY"
+"MaxQueueSizePercentage"=dword:00000000
+"PurgeThreshholdValueInKB"=dword:00000000
+"ServiceTimeout"=dword:00000000
+"MachineID"="00000000-0000-0000-0000-000000000000"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\Assert Filtering Policy]
+"ReportAndContinue"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\BrokerUp]
+"WWAJSE"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\Consent]
+"DefaultConsent"=dword:00000000
+"NewUserDefaultConsent"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\Hangs]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\HeapControlledList]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\HeapControlledList\dwm.exe]
+"EnableHeapThrottle"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\RuntimeExceptionHelperModules]
+"C:\\Windows\\System32\\msiwer.dll"=dword:00000000
+"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscordacwks.dll"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\WMR]
+"Disable"=dword:00000001
+
+
